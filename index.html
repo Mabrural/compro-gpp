@@ -147,22 +147,32 @@
                 </a>
 
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home"
+                    <a href="#home" data-i18n="nav_home"
                         class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Home</a>
-                    <a href="#about"
+                    <a href="#about" data-i18n="nav_about"
                         class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">About</a>
-                    <a href="#services"
+                    <a href="#services" data-i18n="nav_services"
                         class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Services</a>
-                    <a href="#products"
+                    <a href="#products" data-i18n="nav_products"
                         class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Products</a>
-                    <a href="#process"
+                    <a href="#process" data-i18n="nav_process"
                         class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Process</a>
-                    <a href="#contact"
+                    <a href="#contact" data-i18n="nav_contact"
                         class="bg-primary hover:bg-tertiary text-white px-6 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact
                         Us</a>
+                    
+                    <select id="lang-switch-desktop" class="bg-transparent border border-primary text-primary font-bold rounded-md px-2 py-1 text-xs cursor-pointer outline-none hover:bg-primary hover:text-white transition-colors">
+                        <option value="id">ID</option>
+                        <option value="en">EN</option>
+                    </select>
                 </div>
 
-                <div class="md:hidden flex items-center">
+                <div class="md:hidden flex items-center gap-4">
+                    <select id="lang-switch-mobile" class="bg-transparent border border-primary text-primary font-bold rounded-md px-2 py-1 text-xs cursor-pointer outline-none">
+                        <option value="id">ID</option>
+                        <option value="en">EN</option>
+                    </select>
+                    
                     <button id="mobile-menu-btn" class="text-primary focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -173,12 +183,12 @@
         <div id="mobile-menu"
             class="hidden md:hidden bg-white/95 backdrop-blur-xl absolute top-full left-0 w-full shadow-lg border-t border-gray-100">
             <div class="px-4 pt-2 pb-6 space-y-2 text-center">
-                <a href="#home" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Home</a>
-                <a href="#about" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">About</a>
-                <a href="#services" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Services</a>
-                <a href="#products" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Products</a>
-                <a href="#process" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Process</a>
-                <a href="#contact" class="block px-3 py-3 mt-4 bg-primary text-white rounded-md mx-4">Contact Us</a>
+                <a href="#home" data-i18n="nav_home" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Home</a>
+                <a href="#about" data-i18n="nav_about" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">About</a>
+                <a href="#services" data-i18n="nav_services" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Services</a>
+                <a href="#products" data-i18n="nav_products" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Products</a>
+                <a href="#process" data-i18n="nav_process" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Process</a>
+                <a href="#contact" data-i18n="nav_contact" class="block px-3 py-3 mt-4 bg-primary text-white rounded-md mx-4">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -200,23 +210,23 @@
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <div
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark text-accent text-sm font-semibold mb-6 border border-accent/30">
-                        <i class="fas fa-bolt"></i> Energi Untuk Masa Depan
+                        <i class="fas fa-bolt"></i> <span data-i18n="hero_badge">Energi Untuk Masa Depan</span>
                     </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-i18n="hero_title">
                         Powering Industries with <br>
                         <span class="text-gradient">Premium Fuel Solutions</span>
                     </h1>
-                    <p class="text-lg text-slate-300 mb-8 max-w-xl">
+                    <p class="text-lg text-slate-300 mb-8 max-w-xl" data-i18n="hero_desc">
                         PT Global Petro Pasifik hadir sebagai mitra Niaga Umum Bahan Bakar Minyak terpercaya. Menjamin
                         pasokan energi yang handal untuk industri, logistik, dan maritim skala internasional.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="#services"
                             class="bg-accent hover:bg-white text-primary px-8 py-3.5 rounded-full font-bold transition-all shadow-lg hover:shadow-accent/50 transform hover:-translate-y-1 flex items-center gap-2">
-                            Explore Services <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="hero_btn_explore">Explore Services</span> <i class="fas fa-arrow-right"></i>
                         </a>
                         <a href="#about"
-                            class="glass-dark hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition-all transform hover:-translate-y-1">
+                            class="glass-dark hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition-all transform hover:-translate-y-1" data-i18n="hero_btn_who">
                             Who We Are
                         </a>
                     </div>
@@ -228,8 +238,8 @@
                             class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center text-accent mb-4">
                             <i class="fas fa-ship text-2xl"></i>
                         </div>
-                        <h3 class="text-white font-bold mb-1">Marine Fuel</h3>
-                        <p class="text-slate-400 text-sm">2,300 KL Floating Storage Capacity</p>
+                        <h3 class="text-white font-bold mb-1" data-i18n="marine_fuel_title">Marine Fuel</h3>
+                        <p class="text-slate-400 text-sm" data-i18n="marine_fuel_desc">2,300 KL Floating Storage Capacity</p>
                     </div>
 
                     <div
@@ -238,8 +248,8 @@
                             class="w-12 h-12 bg-quaternary/20 rounded-lg flex items-center justify-center text-quaternary mb-4">
                             <i class="fas fa-industry text-2xl"></i>
                         </div>
-                        <h3 class="text-white font-bold mb-1">Industrial Supply</h3>
-                        <p class="text-slate-400 text-sm">Consistent & High-Quality Fuel Delivery</p>
+                        <h3 class="text-white font-bold mb-1" data-i18n="industrial_supply_title">Industrial Supply</h3>
+                        <p class="text-slate-400 text-sm" data-i18n="industrial_supply_desc">Consistent & High-Quality Fuel Delivery</p>
                     </div>
 
                     <div
@@ -253,7 +263,7 @@
         </div>
 
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center animate-bounce">
-            <p class="text-slate-400 text-xs tracking-widest uppercase mb-2">Scroll Down</p>
+            <p class="text-slate-400 text-xs tracking-widest uppercase mb-2" data-i18n="scroll_down">Scroll Down</p>
             <i class="fas fa-chevron-down text-accent"></i>
         </div>
     </section>
@@ -271,15 +281,15 @@
                     <div
                         class="absolute -bottom-8 -right-8 glass-light p-6 rounded-xl shadow-glass-light z-20 w-48 border-t-4 border-accent">
                         <h4 class="text-primary font-bold text-3xl">ISO</h4>
-                        <p class="text-sm text-slate-500 font-medium">Standard Compliance</p>
+                        <p class="text-sm text-slate-500 font-medium" data-i18n="iso_compliance">Standard Compliance</p>
                     </div>
                 </div>
 
                 <div data-aos="fade-left">
-                    <h2 class="text-sm text-quaternary font-bold tracking-widest uppercase mb-2">About The Company</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6">Membangun Ekosistem Energi yang Handal
+                    <h2 class="text-sm text-quaternary font-bold tracking-widest uppercase mb-2" data-i18n="about_badge">About The Company</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6" data-i18n="about_title">Membangun Ekosistem Energi yang Handal
                         & Profesional</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
+                    <p class="text-slate-600 mb-6 leading-relaxed" data-i18n="about_desc">
                         Berpusat di Batam, Kepulauan Riau, <strong>PT Global Petro Pasifik</strong> beroperasi dengan
                         legalitas resmi sebagai penyedia Izin Usaha Niaga Umum Bahan Bakar Minyak. Kami mendistribusikan
                         energi untuk menunjang kegiatan logistik, transportasi laut, dan manufaktur berskala besar.
@@ -292,8 +302,8 @@
                                 <i class="fas fa-eye"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary mb-2">Visi Kami</h4>
-                                <p class="text-slate-600 text-sm">Menjadi perusahaan niaga bahan bakar minyak kelas
+                                <h4 class="text-xl font-bold text-primary mb-2" data-i18n="about_vision_title">Visi Kami</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="about_vision_desc">Menjadi perusahaan niaga bahan bakar minyak kelas
                                     dunia yang berintegritas, mengedepankan kualitas pelayanan, dan menjadi urat nadi
                                     pergerakan industri nasional maupun internasional.</p>
                             </div>
@@ -304,8 +314,8 @@
                                 <i class="fas fa-gem"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary mb-2">Core Values</h4>
-                                <p class="text-slate-600 text-sm">Keselamatan (Safety First), Kualitas Terjamin,
+                                <h4 class="text-xl font-bold text-primary mb-2" data-i18n="about_core_title">Core Values</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="about_core_desc">Keselamatan (Safety First), Kualitas Terjamin,
                                     Ketepatan Pengiriman, dan Kepuasan Pelanggan secara berkelanjutan.</p>
                             </div>
                         </div>
@@ -328,8 +338,8 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-accent font-bold tracking-widest uppercase mb-2">Business Services</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-white">Comprehensive Fuel Solutions</h3>
+                <h2 class="text-accent font-bold tracking-widest uppercase mb-2" data-i18n="services_badge">Business Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white" data-i18n="services_title">Comprehensive Fuel Solutions</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -339,8 +349,8 @@
                         class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-accent text-3xl mb-6 group-hover:bg-accent group-hover:text-primary transition-all">
                         <i class="fas fa-gas-pump"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-3">Fuel Trading</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <h4 class="text-xl font-bold text-white mb-3" data-i18n="svc_1_title">Fuel Trading</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="svc_1_desc">
                         Distribusi bahan bakar minyak skala besar dengan jaminan kualitas dan rantai pasok yang
                         terverifikasi secara hukum dan standar industri.
                     </p>
@@ -352,8 +362,8 @@
                         class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-accent text-3xl mb-6 group-hover:bg-accent group-hover:text-primary transition-all">
                         <i class="fas fa-anchor"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-3">Marine Fuel Supply</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <h4 class="text-xl font-bold text-white mb-3" data-i18n="svc_2_title">Marine Fuel Supply</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="svc_2_desc">
                         Melayani penyediaan bunker untuk kapal domestik maupun internasional dengan dukungan Floating
                         Storage berkapasitas besar di perairan strategis.
                     </p>
@@ -365,8 +375,8 @@
                         class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-accent text-3xl mb-6 group-hover:bg-accent group-hover:text-primary transition-all">
                         <i class="fas fa-industry"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-3">Industrial Distribution</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <h4 class="text-xl font-bold text-white mb-3" data-i18n="svc_3_title">Industrial Distribution</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="svc_3_desc">
                         Mitra pemasok bahan bakar industri manufaktur, pertambangan, dan pembangkit listrik guna
                         memastikan operasional berjalan tanpa hambatan.
                     </p>
@@ -378,9 +388,9 @@
     <section id="products" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2">Our Portfolio</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-primary">Premium Fuel Products</h3>
-                <p class="text-slate-600 mt-4">Kami menyediakan berbagai spesifikasi BBM yang telah disertifikasi untuk
+                <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2" data-i18n="portfolio_badge">Our Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-primary" data-i18n="portfolio_title">Premium Fuel Products</h3>
+                <p class="text-slate-600 mt-4" data-i18n="portfolio_desc">Kami menyediakan berbagai spesifikasi BBM yang telah disertifikasi untuk
                     memenuhi kebutuhan mesin industri dan maritim berteknologi tinggi.</p>
             </div>
 
@@ -390,7 +400,7 @@
                     <div class="text-quaternary mb-4"><i class="fas fa-droplet text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Probio 48</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MINYAK SOLAR CN 48</p>
-                    <p class="text-slate-600 text-sm">Bahan bakar diesel putaran tinggi standar industri untuk kinerja
+                    <p class="text-slate-600 text-sm" data-i18n="gpro48_desc">Bahan bakar diesel putaran tinggi standar industri untuk kinerja
                         mesin optimal.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group"
@@ -398,7 +408,7 @@
                     <div class="text-quaternary mb-4"><i class="fas fa-droplet text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Probio 51</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MINYAK SOLAR CN 51</p>
-                    <p class="text-slate-600 text-sm">Diesel kualitas premium dengan Cetane Number tinggi untuk
+                    <p class="text-slate-600 text-sm" data-i18n="gpro51_desc">Diesel kualitas premium dengan Cetane Number tinggi untuk
                         efisiensi pembakaran maksimal.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group"
@@ -406,7 +416,7 @@
                     <div class="text-secondary mb-4"><i class="fas fa-water text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Pro 180</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 180 (HSFO)</p>
-                    <p class="text-slate-600 text-sm">Marine Fuel Oil standar untuk kebutuhan sistem pendorong kapal
+                    <p class="text-slate-600 text-sm" data-i18n="gpro180_desc">Marine Fuel Oil standar untuk kebutuhan sistem pendorong kapal
                         besar berspesifikasi HSFO.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group"
@@ -414,7 +424,7 @@
                     <div class="text-secondary mb-4"><i class="fas fa-water text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Pro 380</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 380 (HSFO)</p>
-                    <p class="text-slate-600 text-sm">Bahan bakar kapal viskositas tinggi yang ekonomis untuk industri
+                    <p class="text-slate-600 text-sm" data-i18n="gpro380_desc">Bahan bakar kapal viskositas tinggi yang ekonomis untuk industri
                         maritim berat.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group"
@@ -422,7 +432,7 @@
                     <div class="text-accent mb-4"><i class="fas fa-leaf text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Pro LS</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 180 (LSFO)</p>
-                    <p class="text-slate-600 text-sm">Low Sulphur Fuel Oil ramah lingkungan sesuai regulasi maritim
+                    <p class="text-slate-600 text-sm" data-i18n="gprols_desc">Low Sulphur Fuel Oil ramah lingkungan sesuai regulasi maritim
                         internasional terkini.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group"
@@ -430,7 +440,7 @@
                     <div class="text-accent mb-4"><i class="fas fa-leaf text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Pro LS 380</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 380 (LSFO)</p>
-                    <p class="text-slate-600 text-sm">LSFO viskositas tinggi untuk keseimbangan performa mesin raksasa
+                    <p class="text-slate-600 text-sm" data-i18n="gprols380_desc">LSFO viskositas tinggi untuk keseimbangan performa mesin raksasa
                         dan emisi bersih.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group md:col-span-2 lg:col-span-1 xl:col-span-2"
@@ -438,7 +448,7 @@
                     <div class="text-primary mb-4"><i class="fas fa-truck-fast text-3xl"></i></div>
                     <h4 class="text-lg font-bold text-primary mb-1">G-Prodiesel</h4>
                     <p class="text-xs text-slate-400 font-semibold mb-3">MDF (Marine Diesel Fuel)</p>
-                    <p class="text-slate-600 text-sm">Dirancang khusus untuk mesin marine diesel putaran menengah hingga
+                    <p class="text-slate-600 text-sm" data-i18n="gprodiesel_desc">Dirancang khusus untuk mesin marine diesel putaran menengah hingga
                         tinggi.</p>
                 </div>
             </div>
@@ -449,16 +459,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-accent font-bold tracking-widest uppercase mb-2">Why Choose Us</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold mb-8">Standar Operasional Kelas Dunia</h3>
+                    <h2 class="text-accent font-bold tracking-widest uppercase mb-2" data-i18n="why_badge">Why Choose Us</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8" data-i18n="why_title">Standar Operasional Kelas Dunia</h3>
 
                     <div class="space-y-6">
                         <div
                             class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
                             <i class="fas fa-check-circle text-2xl text-accent"></i>
                             <div>
-                                <h5 class="font-bold text-lg">Reliable Supply</h5>
-                                <p class="text-sm text-slate-400">Kepastian ketersediaan pasokan untuk kelancaran bisnis
+                                <h5 class="font-bold text-lg" data-i18n="why_1_title">Reliable Supply</h5>
+                                <p class="text-sm text-slate-400" data-i18n="why_1_desc">Kepastian ketersediaan pasokan untuk kelancaran bisnis
                                     Anda.</p>
                             </div>
                         </div>
@@ -466,8 +476,8 @@
                             class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
                             <i class="fas fa-shield-alt text-2xl text-accent"></i>
                             <div>
-                                <h5 class="font-bold text-lg">High Quality Fuel</h5>
-                                <p class="text-sm text-slate-400">Produk memenuhi spesifikasi teknis dan standar mutu
+                                <h5 class="font-bold text-lg" data-i18n="why_2_title">High Quality Fuel</h5>
+                                <p class="text-sm text-slate-400" data-i18n="why_2_desc">Produk memenuhi spesifikasi teknis dan standar mutu
                                     migas resmi.</p>
                             </div>
                         </div>
@@ -475,8 +485,8 @@
                             class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
                             <i class="fas fa-chart-line text-2xl text-accent"></i>
                             <div>
-                                <h5 class="font-bold text-lg">Competitive Pricing</h5>
-                                <p class="text-sm text-slate-400">Struktur biaya efisien memberikan nilai keekonomian
+                                <h5 class="font-bold text-lg" data-i18n="why_3_title">Competitive Pricing</h5>
+                                <p class="text-sm text-slate-400" data-i18n="why_3_desc">Struktur biaya efisien memberikan nilai keekonomian
                                     terbaik.</p>
                             </div>
                         </div>
@@ -484,8 +494,8 @@
                             class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
                             <i class="fas fa-hard-hat text-2xl text-accent"></i>
                             <div>
-                                <h5 class="font-bold text-lg">Safety First</h5>
-                                <p class="text-sm text-slate-400">Kepatuhan ketat terhadap aspek K3LL (Kesehatan,
+                                <h5 class="font-bold text-lg" data-i18n="why_4_title">Safety First</h5>
+                                <p class="text-sm text-slate-400" data-i18n="why_4_desc">Kepatuhan ketat terhadap aspek K3LL (Kesehatan,
                                     Keselamatan Kerja, dan Lingkungan).</p>
                             </div>
                         </div>
@@ -509,22 +519,22 @@
                 <div data-aos="fade-up" data-aos-delay="0">
                     <i class="fas fa-ship text-3xl text-accent mb-4"></i>
                     <div class="text-4xl font-bold mb-2"><span class="counter" data-target="2300">0</span>+</div>
-                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">KL Storage Capacity</p>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80" data-i18n="counter_1">KL Storage Capacity</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-globe-asia text-3xl text-accent mb-4"></i>
                     <div class="text-4xl font-bold mb-2"><span class="counter" data-target="7">0</span></div>
-                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">Premium Brands</p>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80" data-i18n="counter_2">Premium Brands</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-handshake text-3xl text-accent mb-4"></i>
                     <div class="text-4xl font-bold mb-2"><span class="counter" data-target="100">0</span>%</div>
-                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">Legal Compliance</p>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80" data-i18n="counter_3">Legal Compliance</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-headset text-3xl text-accent mb-4"></i>
                     <div class="text-4xl font-bold mb-2">24/7</div>
-                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">Operational Support</p>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80" data-i18n="counter_4">Operational Support</p>
                 </div>
             </div>
         </div>
@@ -533,8 +543,8 @@
     <section id="process" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
-                <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2">How We Work</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-primary">Streamlined Business Process</h3>
+                <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2" data-i18n="process_badge">How We Work</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-primary" data-i18n="process_title">Streamlined Business Process</h3>
             </div>
 
             <div class="relative timeline-line">
@@ -544,8 +554,8 @@
                         <div
                             class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">
                             1</div>
-                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Inquiry</h4>
-                        <p class="text-sm text-slate-500 text-left md:text-center">Permintaan spesifikasi produk &
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center" data-i18n="proc_1_title">Inquiry</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center" data-i18n="proc_1_desc">Permintaan spesifikasi produk &
                             volume dari klien.</p>
                     </div>
                     <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0"
@@ -553,8 +563,8 @@
                         <div
                             class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">
                             2</div>
-                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Quotation</h4>
-                        <p class="text-sm text-slate-500 text-left md:text-center">Penawaran harga terbaik dan rancangan
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center" data-i18n="proc_2_title">Quotation</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center" data-i18n="proc_2_desc">Penawaran harga terbaik dan rancangan
                             logistik.</p>
                     </div>
                     <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0"
@@ -562,8 +572,8 @@
                         <div
                             class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">
                             3</div>
-                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Agreement</h4>
-                        <p class="text-sm text-slate-500 text-left md:text-center">Kesepakatan kontrak, legalitas, dan
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center" data-i18n="proc_3_title">Agreement</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center" data-i18n="proc_3_desc">Kesepakatan kontrak, legalitas, dan
                             jadwal suplai.</p>
                     </div>
                     <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0"
@@ -571,8 +581,8 @@
                         <div
                             class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">
                             4</div>
-                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Delivery</h4>
-                        <p class="text-sm text-slate-500 text-left md:text-center">Pengiriman BBM dengan presisi volume
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center" data-i18n="proc_4_title">Delivery</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center" data-i18n="proc_4_desc">Pengiriman BBM dengan presisi volume
                             & ketepatan waktu.</p>
                     </div>
                     <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0"
@@ -580,8 +590,8 @@
                         <div
                             class="w-16 h-16 bg-primary border-4 border-accent rounded-full flex items-center justify-center text-accent text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">
                             <i class="fas fa-check"></i></div>
-                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Support</h4>
-                        <p class="text-sm text-slate-500 text-left md:text-center">Dukungan purna jual dan manajemen
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center" data-i18n="proc_5_title">Support</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center" data-i18n="proc_5_desc">Dukungan purna jual dan manajemen
                             administrasi.</p>
                     </div>
                 </div>
@@ -594,9 +604,9 @@
             <div
                 class="bg-white rounded-3xl shadow-xl p-8 md:p-16 border border-slate-100 flex flex-col lg:flex-row gap-12 items-center">
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
-                    <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2">Coverage Area</h2>
-                    <h3 class="text-3xl font-bold text-primary mb-6">Strategic Operational Hub</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
+                    <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2" data-i18n="coverage_badge">Coverage Area</h2>
+                    <h3 class="text-3xl font-bold text-primary mb-6" data-i18n="coverage_title">Strategic Operational Hub</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed" data-i18n="coverage_desc">
                         Infrastruktur kami berpusat di perairan strategis Kepulauan Riau. Memiliki <strong>Floating
                             Storage OB SELARAS 01</strong> berkapasitas 2.300 KL yang berlokasi di Kec. Meral, Kab.
                         Karimun, kami siap melayani kebutuhan suplai BBM dari pusat maritim Selat Malaka, Batam, hingga
@@ -639,11 +649,11 @@
             </div>
         </div>
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Siap Mengakselerasi Kinerja Bisnis Anda?</h2>
-            <p class="text-slate-300 text-lg mb-10">Jadilah bagian dari mitra strategis kami untuk pasokan bahan bakar
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" data-i18n="cta_title">Siap Mengakselerasi Kinerja Bisnis Anda?</h2>
+            <p class="text-slate-300 text-lg mb-10" data-i18n="cta_desc">Jadilah bagian dari mitra strategis kami untuk pasokan bahan bakar
                 minyak yang efisien, handal, dan profesional.</p>
             <a href="#contact"
-                class="inline-block bg-white text-primary hover:bg-accent hover:text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg">
+                class="inline-block bg-white text-primary hover:bg-accent hover:text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg" data-i18n="cta_btn">
                 Hubungi Kami Sekarang
             </a>
         </div>
@@ -656,7 +666,7 @@
                     <div class="bg-white p-3 rounded-lg inline-block mb-6 shadow-lg">
                         <img src="assets/gpp.png" alt="Global Petro Pasifik" class="h-10 object-contain filter">
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="footer_desc">
                         Perusahaan niaga umum bahan bakar minyak dengan standar internasional. Melayani suplai industri
                         dan maritim dengan jaminan kualitas terbaik.
                     </p>
@@ -677,25 +687,17 @@
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white">Quick Links</h4>
+                    <h4 class="text-lg font-bold mb-6 text-white" data-i18n="footer_quick_links">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#about"
-                                class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i
-                                    class="fas fa-chevron-right text-xs"></i> About Us</a></li>
-                        <li><a href="#services"
-                                class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i
-                                    class="fas fa-chevron-right text-xs"></i> Services</a></li>
-                        <li><a href="#products"
-                                class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i
-                                    class="fas fa-chevron-right text-xs"></i> Our Products</a></li>
-                        <li><a href="#process"
-                                class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i
-                                    class="fas fa-chevron-right text-xs"></i> Work Process</a></li>
+                        <li><a href="#about" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> <span data-i18n="nav_about">About Us</span></a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> <span data-i18n="nav_services">Services</span></a></li>
+                        <li><a href="#products" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> <span data-i18n="nav_products">Our Products</span></a></li>
+                        <li><a href="#process" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> <span data-i18n="nav_process">Work Process</span></a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white">Our Brands</h4>
+                    <h4 class="text-lg font-bold mb-6 text-white" data-i18n="footer_brands">Our Brands</h4>
                     <ul class="space-y-3">
                         <li><span class="text-slate-400 text-sm flex items-center gap-2"><i
                                     class="fas fa-check text-accent text-xs"></i> G-Probio 48 & 51</span></li>
@@ -709,7 +711,7 @@
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white">Head Office</h4>
+                    <h4 class="text-lg font-bold mb-6 text-white" data-i18n="footer_head_office">Head Office</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-map-marker-alt text-accent mt-1"></i>
@@ -724,7 +726,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope text-accent"></i>
-                            <span class="text-slate-400 text-sm">info@globalpetro.co.id</span>
+                            <span class="text-slate-400 text-sm">info@globalpetropasifik.com</span>
                         </li>
                     </ul>
                 </div>
@@ -733,12 +735,12 @@
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-slate-500 text-sm">
                     &copy;
-                    <script>document.write(new Date().getFullYear())</script> PT Global Petro Pasifik. All rights
-                    reserved.
+                    <script>document.write(new Date().getFullYear())</script> <span data-i18n="footer_rights">PT Global Petro Pasifik. All rights
+                    reserved.</span>
                 </p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors" data-i18n="footer_terms">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -746,79 +748,249 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS Animation
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
-
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on click link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-md');
-                navbar.classList.remove('py-4');
-                navbar.classList.add('py-2');
-            } else {
-                navbar.classList.remove('shadow-md');
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-2');
+        // ==========================================
+        // ADVANCED AJAX MULTI-LANGUAGE SYSTEM
+        // Simulated using Data URI & Fetch API
+        // ==========================================
+        
+        // Dictionary Object (Data)
+        const dictionary = {
+            "id": {
+                "nav_home": "Beranda", "nav_about": "Tentang", "nav_services": "Layanan", "nav_products": "Produk", "nav_process": "Proses", "nav_contact": "Hubungi Kami",
+                "hero_badge": "Energi Untuk Masa Depan",
+                "hero_title": "Mendukung Industri dengan <br> <span class=\"text-gradient\">Solusi BBM Premium</span>",
+                "hero_desc": "PT Global Petro Pasifik hadir sebagai mitra Niaga Umum Bahan Bakar Minyak terpercaya. Menjamin pasokan energi yang handal untuk industri, logistik, dan maritim skala internasional.",
+                "hero_btn_explore": "Jelajahi Layanan", "hero_btn_who": "Siapa Kami",
+                "marine_fuel_title": "Bahan Bakar Maritim", "marine_fuel_desc": "Kapasitas Terapung 2.300 KL",
+                "industrial_supply_title": "Pasokan Industri", "industrial_supply_desc": "Pengiriman BBM Konsisten & Berkualitas",
+                "scroll_down": "Gulir ke Bawah",
+                "iso_compliance": "Standar Terverifikasi",
+                "about_badge": "Tentang Perusahaan",
+                "about_title": "Membangun Ekosistem Energi yang Handal & Profesional",
+                "about_desc": "Berpusat di Batam, Kepulauan Riau, <strong>PT Global Petro Pasifik</strong> beroperasi dengan legalitas resmi sebagai penyedia Izin Usaha Niaga Umum Bahan Bakar Minyak. Kami mendistribusikan energi untuk menunjang kegiatan logistik, transportasi laut, dan manufaktur berskala besar.",
+                "about_vision_title": "Visi Kami",
+                "about_vision_desc": "Menjadi perusahaan niaga bahan bakar minyak kelas dunia yang berintegritas, mengedepankan kualitas pelayanan, dan menjadi urat nadi pergerakan industri nasional maupun internasional.",
+                "about_core_title": "Nilai Inti",
+                "about_core_desc": "Keselamatan (Safety First), Kualitas Terjamin, Ketepatan Pengiriman, dan Kepuasan Pelanggan secara berkelanjutan.",
+                "services_badge": "Layanan Bisnis",
+                "services_title": "Solusi Bahan Bakar Komprehensif",
+                "svc_1_title": "Perdagangan BBM", "svc_1_desc": "Distribusi bahan bakar minyak skala besar dengan jaminan kualitas dan rantai pasok yang terverifikasi secara hukum dan standar industri.",
+                "svc_2_title": "Pasokan BBM Maritim", "svc_2_desc": "Melayani penyediaan bunker untuk kapal domestik maupun internasional dengan dukungan Floating Storage berkapasitas besar di perairan strategis.",
+                "svc_3_title": "Distribusi Industri", "svc_3_desc": "Mitra pemasok bahan bakar industri manufaktur, pertambangan, dan pembangkit listrik guna memastikan operasional berjalan tanpa hambatan.",
+                "portfolio_badge": "Portofolio Kami", "portfolio_title": "Produk BBM Premium",
+                "portfolio_desc": "Kami menyediakan berbagai spesifikasi BBM yang telah disertifikasi untuk memenuhi kebutuhan mesin industri dan maritim berteknologi tinggi.",
+                "gpro48_desc": "Bahan bakar diesel putaran tinggi standar industri untuk kinerja mesin optimal.",
+                "gpro51_desc": "Diesel kualitas premium dengan Cetane Number tinggi untuk efisiensi pembakaran maksimal.",
+                "gpro180_desc": "Marine Fuel Oil standar untuk kebutuhan sistem pendorong kapal besar berspesifikasi HSFO.",
+                "gpro380_desc": "Bahan bakar kapal viskositas tinggi yang ekonomis untuk industri maritim berat.",
+                "gprols_desc": "Low Sulphur Fuel Oil ramah lingkungan sesuai regulasi maritim internasional terkini.",
+                "gprols380_desc": "LSFO viskositas tinggi untuk keseimbangan performa mesin raksasa dan emisi bersih.",
+                "gprodiesel_desc": "Dirancang khusus untuk mesin marine diesel putaran menengah hingga tinggi.",
+                "why_badge": "Mengapa Memilih Kami", "why_title": "Standar Operasional Kelas Dunia",
+                "why_1_title": "Pasokan Handal", "why_1_desc": "Kepastian ketersediaan pasokan untuk kelancaran bisnis Anda.",
+                "why_2_title": "BBM Berkualitas Tinggi", "why_2_desc": "Produk memenuhi spesifikasi teknis dan standar mutu migas resmi.",
+                "why_3_title": "Harga Kompetitif", "why_3_desc": "Struktur biaya efisien memberikan nilai keekonomian terbaik.",
+                "why_4_title": "Utamakan Keselamatan", "why_4_desc": "Kepatuhan ketat terhadap aspek K3LL (Kesehatan, Keselamatan Kerja, dan Lingkungan).",
+                "counter_1": "Kapasitas Penyimpanan KL", "counter_2": "Merek Premium", "counter_3": "Kepatuhan Hukum", "counter_4": "Dukungan Operasional",
+                "process_badge": "Cara Kami Bekerja", "process_title": "Proses Bisnis Terstruktur",
+                "proc_1_title": "Permintaan", "proc_1_desc": "Permintaan spesifikasi produk & volume dari klien.",
+                "proc_2_title": "Penawaran", "proc_2_desc": "Penawaran harga terbaik dan rancangan logistik.",
+                "proc_3_title": "Persetujuan", "proc_3_desc": "Kesepakatan kontrak, legalitas, dan jadwal suplai.",
+                "proc_4_title": "Pengiriman", "proc_4_desc": "Pengiriman BBM dengan presisi volume & ketepatan waktu.",
+                "proc_5_title": "Dukungan", "proc_5_desc": "Dukungan purna jual dan manajemen administrasi.",
+                "coverage_badge": "Area Cakupan", "coverage_title": "Pusat Operasional Strategis",
+                "coverage_desc": "Infrastruktur kami berpusat di perairan strategis Kepulauan Riau. Memiliki <strong>Floating Storage OB SELARAS 01</strong> berkapasitas 2.300 KL yang berlokasi di Kec. Meral, Kab. Karimun, kami siap melayani kebutuhan suplai BBM dari pusat maritim Selat Malaka, Batam, hingga jangkauan nusantara.",
+                "cta_title": "Siap Mengakselerasi Kinerja Bisnis Anda?",
+                "cta_desc": "Jadilah bagian dari mitra strategis kami untuk pasokan bahan bakar minyak yang efisien, handal, dan profesional.",
+                "cta_btn": "Hubungi Kami Sekarang",
+                "footer_desc": "Perusahaan niaga umum bahan bakar minyak dengan standar internasional. Melayani suplai industri dan maritim dengan jaminan kualitas terbaik.",
+                "footer_quick_links": "Tautan Cepat", "footer_brands": "Merek Kami", "footer_head_office": "Kantor Pusat",
+                "footer_rights": "PT Global Petro Pasifik. Hak Cipta Dilindungi.",
+                "footer_privacy": "Kebijakan Privasi", "footer_terms": "Syarat & Ketentuan"
+            },
+            "en": {
+                "nav_home": "Home", "nav_about": "About", "nav_services": "Services", "nav_products": "Products", "nav_process": "Process", "nav_contact": "Contact Us",
+                "hero_badge": "Energy For The Future",
+                "hero_title": "Powering Industries with <br> <span class=\"text-gradient\">Premium Fuel Solutions</span>",
+                "hero_desc": "PT Global Petro Pasifik is here as your trusted General Fuel Trading partner. Ensuring reliable energy supply for international scale industrial, logistics, and maritime sectors.",
+                "hero_btn_explore": "Explore Services", "hero_btn_who": "Who We Are",
+                "marine_fuel_title": "Marine Fuel", "marine_fuel_desc": "2,300 KL Floating Storage Capacity",
+                "industrial_supply_title": "Industrial Supply", "industrial_supply_desc": "Consistent & High-Quality Fuel Delivery",
+                "scroll_down": "Scroll Down",
+                "iso_compliance": "Standard Compliance",
+                "about_badge": "About The Company",
+                "about_title": "Building a Reliable & Professional Energy Ecosystem",
+                "about_desc": "Based in Batam, Riau Islands, <strong>PT Global Petro Pasifik</strong> operates with official legality as a provider of General Fuel Trading Business License. We distribute energy to support large-scale logistics, sea transportation, and manufacturing activities.",
+                "about_vision_title": "Our Vision",
+                "about_vision_desc": "To become a world-class fuel trading company with integrity, prioritizing service quality, and becoming the lifeblood of national and international industrial movement.",
+                "about_core_title": "Core Values",
+                "about_core_desc": "Safety First, Guaranteed Quality, Delivery Punctuality, and Sustainable Customer Satisfaction.",
+                "services_badge": "Business Services",
+                "services_title": "Comprehensive Fuel Solutions",
+                "svc_1_title": "Fuel Trading", "svc_1_desc": "Large-scale fuel distribution with quality assurance and a supply chain verified by law and industry standards.",
+                "svc_2_title": "Marine Fuel Supply", "svc_2_desc": "Serving bunker provision for domestic and international vessels supported by large capacity Floating Storage in strategic waters.",
+                "svc_3_title": "Industrial Distribution", "svc_3_desc": "Fuel supply partner for manufacturing, mining, and power plant industries to ensure seamless operations.",
+                "portfolio_badge": "Our Portfolio", "portfolio_title": "Premium Fuel Products",
+                "portfolio_desc": "We provide various certified fuel specifications to meet the needs of high-tech industrial and maritime engines.",
+                "gpro48_desc": "Industry-standard high-speed diesel fuel for optimal engine performance.",
+                "gpro51_desc": "Premium quality diesel with high Cetane Number for maximum combustion efficiency.",
+                "gpro180_desc": "Standard Marine Fuel Oil for large vessel propulsion systems with HSFO specifications.",
+                "gpro380_desc": "Economical high-viscosity marine fuel for the heavy maritime industry.",
+                "gprols_desc": "Eco-friendly Low Sulphur Fuel Oil complying with the latest international maritime regulations.",
+                "gprols380_desc": "High-viscosity LSFO for balancing giant engine performance and clean emissions.",
+                "gprodiesel_desc": "Specifically designed for medium to high-speed marine diesel engines.",
+                "why_badge": "Why Choose Us", "why_title": "World-Class Operational Standards",
+                "why_1_title": "Reliable Supply", "why_1_desc": "Certainty of supply availability for the smooth running of your business.",
+                "why_2_title": "High Quality Fuel", "why_2_desc": "Products meet technical specifications and official oil and gas quality standards.",
+                "why_3_title": "Competitive Pricing", "why_3_desc": "Efficient cost structure provides the best economic value.",
+                "why_4_title": "Safety First", "why_4_desc": "Strict compliance with HSE (Health, Safety, and Environment) aspects.",
+                "counter_1": "KL Storage Capacity", "counter_2": "Premium Brands", "counter_3": "Legal Compliance", "counter_4": "Operational Support",
+                "process_badge": "How We Work", "process_title": "Streamlined Business Process",
+                "proc_1_title": "Inquiry", "proc_1_desc": "Request for product specifications & volume from clients.",
+                "proc_2_title": "Quotation", "proc_2_desc": "Best price offer and logistics planning.",
+                "proc_3_title": "Agreement", "proc_3_desc": "Contract agreement, legality, and supply schedule.",
+                "proc_4_title": "Delivery", "proc_4_desc": "Fuel delivery with volume precision & punctuality.",
+                "proc_5_title": "Support", "proc_5_desc": "After-sales support and administrative management.",
+                "coverage_badge": "Coverage Area", "coverage_title": "Strategic Operational Hub",
+                "coverage_desc": "Our infrastructure is centered in the strategic waters of the Riau Islands. Having <strong>Floating Storage OB SELARAS 01</strong> with a capacity of 2,300 KL located in Meral District, Karimun Regency, we are ready to serve fuel supply needs from the maritime center of the Malacca Strait, Batam, to the archipelago's reach.",
+                "cta_title": "Ready to Accelerate Your Business Performance?",
+                "cta_desc": "Be part of our strategic partners for an efficient, reliable, and professional fuel supply.",
+                "cta_btn": "Contact Us Now",
+                "footer_desc": "General fuel trading company with international standards. Serving industrial and maritime supplies with the best quality assurance.",
+                "footer_quick_links": "Quick Links", "footer_brands": "Our Brands", "footer_head_office": "Head Office",
+                "footer_rights": "PT Global Petro Pasifik. All rights reserved.",
+                "footer_privacy": "Privacy Policy", "footer_terms": "Terms of Service"
             }
-        });
+        };
 
-        // Animated Counter Logic
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200; // The lower the slower
+        // Create Data URI for fetch
+        const dataUri = "data:application/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dictionary));
+        let loadedTranslations = null;
 
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 15);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
+        // Async Fetch function
+        async function fetchTranslations() {
+            try {
+                const response = await fetch(dataUri);
+                if (!response.ok) throw new Error("Gagal mengambil data bahasa.");
+                return await response.json();
+            } catch (error) {
+                console.error("AJAX Fetch Error:", error);
+                return dictionary; // Fallback ke objek lokal
+            }
         }
 
-        // Intersection Observer for Counters
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
+        // Apply Translations
+        async function applyLanguage(lang) {
+            if (!loadedTranslations) {
+                loadedTranslations = await fetchTranslations();
+            }
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (loadedTranslations[lang] && loadedTranslations[lang][key]) {
+                    el.innerHTML = loadedTranslations[lang][key];
                 }
             });
-        }, { threshold: 0.5 });
 
-        const counterSection = document.getElementById('counter-section');
-        if (counterSection) {
-            observer.observe(counterSection);
+            // Update HTML Lang Attribute
+            document.documentElement.lang = lang;
+            
+            // Sync dropdowns
+            document.getElementById('lang-switch-desktop').value = lang;
+            document.getElementById('lang-switch-mobile').value = lang;
+            
+            // Save to localStorage
+            localStorage.setItem('gpp_preferred_lang', lang);
         }
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            // Setup AOS
+            AOS.init({
+                once: true,
+                offset: 50,
+                duration: 800,
+                easing: 'ease-out-cubic',
+            });
+
+            // Setup Language Event Listeners
+            const savedLang = localStorage.getItem('gpp_preferred_lang') || 'id'; // Default ID
+            
+            document.getElementById('lang-switch-desktop').addEventListener('change', (e) => {
+                applyLanguage(e.target.value);
+            });
+            document.getElementById('lang-switch-mobile').addEventListener('change', (e) => {
+                applyLanguage(e.target.value);
+            });
+
+            // Jalankan bahasa saat pertama di load
+            applyLanguage(savedLang);
+
+            // Setup Mobile Menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Setup Navbar Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.remove('py-4');
+                    navbar.classList.add('py-2');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            });
+
+            // Setup Counters
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; 
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 15);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const counterSection = document.getElementById('counter-section');
+            if (counterSection) {
+                observer.observe(counterSection);
+            }
+        });
     </script>
 </body>
 

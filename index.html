@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Global Petro Pasifik | Premium Fuel Trading Company</title>
+    <meta name="description" content="PT Global Petro Pasifik adalah perusahaan niaga umum bahan bakar minyak (Fuel Trading Company) terkemuka dengan layanan profesional berstandar internasional.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#061A40',
+                        secondary: '#0A2A66',
+                        tertiary: '#0F52BA',
+                        quaternary: '#1E88E5',
+                        accent: '#00C2FF',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.15)',
+                        'glass-light': '0 8px 32px 0 rgba(30, 136, 229, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-dark {
+            background: rgba(10, 42, 102, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float-delayed {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float-delayed {
+            animation: float-delayed 7s ease-in-out infinite 2s;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #FFFFFF, #00C2FF);
+        }
+        
+        .text-gradient-dark {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #061A40, #1E88E5);
+        }
+
+        /* Smooth reveal for timeline */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #1E88E5;
+            transform: translateX(-50%);
+            opacity: 0.3;
+        }
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-accent selection:text-primary">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 glass-light shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-2">
+                    <img src="assets/gpp.png" alt="Logo PT Global Petro Pasifik" class="h-12 w-auto object-contain">
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Home</a>
+                    <a href="#about" class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">About</a>
+                    <a href="#services" class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Services</a>
+                    <a href="#products" class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Products</a>
+                    <a href="#process" class="text-primary hover:text-quaternary font-medium transition-colors text-sm uppercase tracking-wide">Process</a>
+                    <a href="#contact" class="bg-primary hover:bg-tertiary text-white px-6 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl absolute top-full left-0 w-full shadow-lg border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#home" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Home</a>
+                <a href="#about" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">About</a>
+                <a href="#services" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Services</a>
+                <a href="#products" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Products</a>
+                <a href="#process" class="block px-3 py-3 text-primary font-medium hover:bg-slate-50">Process</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 bg-primary text-white rounded-md mx-4">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-20"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent"></div>
+            <div class="absolute top-1/4 -right-20 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
+            <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-quaternary rounded-full mix-blend-multiply filter blur-[128px] opacity-30"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark text-accent text-sm font-semibold mb-6 border border-accent/30">
+                        <i class="fas fa-bolt"></i> Energi Untuk Masa Depan
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Powering Industries with <br>
+                        <span class="text-gradient">Premium Fuel Solutions</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 mb-8 max-w-xl">
+                        PT Global Petro Pasifik hadir sebagai mitra Niaga Umum Bahan Bakar Minyak terpercaya. Menjamin pasokan energi yang handal untuk industri, logistik, dan maritim skala internasional.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services" class="bg-accent hover:bg-white text-primary px-8 py-3.5 rounded-full font-bold transition-all shadow-lg hover:shadow-accent/50 transform hover:-translate-y-1 flex items-center gap-2">
+                            Explore Services <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="glass-dark hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition-all transform hover:-translate-y-1">
+                            Who We Are
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:block relative h-[500px]" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="absolute top-10 right-10 w-64 glass-dark p-6 rounded-2xl animate-float shadow-2xl">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center text-accent mb-4">
+                            <i class="fas fa-ship text-2xl"></i>
+                        </div>
+                        <h3 class="text-white font-bold mb-1">Marine Fuel</h3>
+                        <p class="text-slate-400 text-sm">2,300 KL Floating Storage Capacity</p>
+                    </div>
+                    
+                    <div class="absolute bottom-20 left-10 w-64 glass-dark p-6 rounded-2xl animate-float-delayed shadow-2xl">
+                        <div class="w-12 h-12 bg-quaternary/20 rounded-lg flex items-center justify-center text-quaternary mb-4">
+                            <i class="fas fa-industry text-2xl"></i>
+                        </div>
+                        <h3 class="text-white font-bold mb-1">Industrial Supply</h3>
+                        <p class="text-slate-400 text-sm">Consistent & High-Quality Fuel Delivery</p>
+                    </div>
+
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 border-[1px] border-accent/20 rounded-full"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border-[1px] border-quaternary/10 rounded-full border-dashed animate-[spin_60s_linear_infinite]"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center animate-bounce">
+            <p class="text-slate-400 text-xs tracking-widest uppercase mb-2">Scroll Down</p>
+            <i class="fas fa-chevron-down text-accent"></i>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-primary rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
+                    <img src="assets/oil-storage-terminal.png" alt="Oil Storage Terminal" class="rounded-3xl shadow-xl relative z-10 w-full h-auto object-cover aspect-[4/3]">
+                    
+                    <div class="absolute -bottom-8 -right-8 glass-light p-6 rounded-xl shadow-glass-light z-20 w-48 border-t-4 border-accent">
+                        <h4 class="text-primary font-bold text-3xl">ISO</h4>
+                        <p class="text-sm text-slate-500 font-medium">Standard Compliance</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h2 class="text-sm text-quaternary font-bold tracking-widest uppercase mb-2">About The Company</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6">Membangun Ekosistem Energi yang Handal & Profesional</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Berpusat di Batam, Kepulauan Riau, <strong>PT Global Petro Pasifik</strong> beroperasi dengan legalitas resmi sebagai penyedia Izin Usaha Niaga Umum Bahan Bakar Minyak. Kami mendistribusikan energi untuk menunjang kegiatan logistik, transportasi laut, dan manufaktur berskala besar.
+                    </p>
+                    
+                    <div class="space-y-6 mt-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary text-white flex-shrink-0 flex items-center justify-center shadow-md">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary mb-2">Visi Kami</h4>
+                                <p class="text-slate-600 text-sm">Menjadi perusahaan niaga bahan bakar minyak kelas dunia yang berintegritas, mengedepankan kualitas pelayanan, dan menjadi urat nadi pergerakan industri nasional maupun internasional.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent text-primary flex-shrink-0 flex items-center justify-center shadow-md">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary mb-2">Core Values</h4>
+                                <p class="text-slate-600 text-sm">Keselamatan (Safety First), Kualitas Terjamin, Ketepatan Pengiriman, dan Kepuasan Pelanggan secara berkelanjutan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-secondary relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-full h-full overflow-hidden z-0">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-primary/30" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"></circle></svg>
+            <svg class="absolute bottom-10 -left-10 w-64 h-64 text-tertiary/20" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"></circle></svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-accent font-bold tracking-widest uppercase mb-2">Business Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Comprehensive Fuel Solutions</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-dark p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-accent text-3xl mb-6 group-hover:bg-accent group-hover:text-primary transition-all">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Fuel Trading</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Distribusi bahan bakar minyak skala besar dengan jaminan kualitas dan rantai pasok yang terverifikasi secara hukum dan standar industri.
+                    </p>
+                </div>
+                
+                <div class="glass-dark p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-accent text-3xl mb-6 group-hover:bg-accent group-hover:text-primary transition-all">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Marine Fuel Supply</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Melayani penyediaan bunker untuk kapal domestik maupun internasional dengan dukungan Floating Storage berkapasitas besar di perairan strategis.
+                    </p>
+                </div>
+
+                <div class="glass-dark p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-accent text-3xl mb-6 group-hover:bg-accent group-hover:text-primary transition-all">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Industrial Distribution</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Mitra pemasok bahan bakar industri manufaktur, pertambangan, dan pembangkit listrik guna memastikan operasional berjalan tanpa hambatan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2">Our Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-primary">Premium Fuel Products</h3>
+                <p class="text-slate-600 mt-4">Kami menyediakan berbagai spesifikasi BBM yang telah disertifikasi untuk memenuhi kebutuhan mesin industri dan maritim berteknologi tinggi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-quaternary mb-4"><i class="fas fa-droplet text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Probio 48</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MINYAK SOLAR CN 48</p>
+                    <p class="text-slate-600 text-sm">Bahan bakar diesel putaran tinggi standar industri untuk kinerja mesin optimal.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-quaternary mb-4"><i class="fas fa-droplet text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Probio 51</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MINYAK SOLAR CN 51</p>
+                    <p class="text-slate-600 text-sm">Diesel kualitas premium dengan Cetane Number tinggi untuk efisiensi pembakaran maksimal.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-secondary mb-4"><i class="fas fa-water text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Pro 180</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 180 (HSFO)</p>
+                    <p class="text-slate-600 text-sm">Marine Fuel Oil standar untuk kebutuhan sistem pendorong kapal besar berspesifikasi HSFO.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-secondary mb-4"><i class="fas fa-water text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Pro 380</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 380 (HSFO)</p>
+                    <p class="text-slate-600 text-sm">Bahan bakar kapal viskositas tinggi yang ekonomis untuk industri maritim berat.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-accent mb-4"><i class="fas fa-leaf text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Pro LS</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 180 (LSFO)</p>
+                    <p class="text-slate-600 text-sm">Low Sulphur Fuel Oil ramah lingkungan sesuai regulasi maritim internasional terkini.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-accent mb-4"><i class="fas fa-leaf text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Pro LS 380</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MFO Cst 380 (LSFO)</p>
+                    <p class="text-slate-600 text-sm">LSFO viskositas tinggi untuk keseimbangan performa mesin raksasa dan emisi bersih.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group md:col-span-2 lg:col-span-1 xl:col-span-2" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-primary mb-4"><i class="fas fa-truck-fast text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-primary mb-1">G-Prodiesel</h4>
+                    <p class="text-xs text-slate-400 font-semibold mb-3">MDF (Marine Diesel Fuel)</p>
+                    <p class="text-slate-600 text-sm">Dirancang khusus untuk mesin marine diesel putaran menengah hingga tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-primary text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-accent font-bold tracking-widest uppercase mb-2">Why Choose Us</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8">Standar Operasional Kelas Dunia</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <i class="fas fa-check-circle text-2xl text-accent"></i>
+                            <div>
+                                <h5 class="font-bold text-lg">Reliable Supply</h5>
+                                <p class="text-sm text-slate-400">Kepastian ketersediaan pasokan untuk kelancaran bisnis Anda.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <i class="fas fa-shield-alt text-2xl text-accent"></i>
+                            <div>
+                                <h5 class="font-bold text-lg">High Quality Fuel</h5>
+                                <p class="text-sm text-slate-400">Produk memenuhi spesifikasi teknis dan standar mutu migas resmi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <i class="fas fa-chart-line text-2xl text-accent"></i>
+                            <div>
+                                <h5 class="font-bold text-lg">Competitive Pricing</h5>
+                                <p class="text-sm text-slate-400">Struktur biaya efisien memberikan nilai keekonomian terbaik.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <i class="fas fa-hard-hat text-2xl text-accent"></i>
+                            <div>
+                                <h5 class="font-bold text-lg">Safety First</h5>
+                                <p class="text-sm text-slate-400">Kepatuhan ketat terhadap aspek K3LL (Kesehatan, Keselamatan Kerja, dan Lingkungan).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <img src="assets/industrial-safety.png" alt="Industrial Safety" class="rounded-2xl shadow-2xl">
+                    <div class="absolute inset-0 bg-primary/20 rounded-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-quaternary relative border-b border-primary/20">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white" id="counter-section">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-ship text-3xl text-accent mb-4"></i>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="2300">0</span>+</div>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">KL Storage Capacity</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-globe-asia text-3xl text-accent mb-4"></i>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="7">0</span></div>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">Premium Brands</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-handshake text-3xl text-accent mb-4"></i>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="100">0</span>%</div>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">Legal Compliance</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-headset text-3xl text-accent mb-4"></i>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <p class="text-sm font-medium uppercase tracking-wider text-white/80">Operational Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2">How We Work</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-primary">Streamlined Business Process</h3>
+            </div>
+
+            <div class="relative timeline-line">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">1</div>
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Inquiry</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center">Permintaan spesifikasi produk & volume dari klien.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">2</div>
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Quotation</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center">Penawaran harga terbaik dan rancangan logistik.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">3</div>
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Agreement</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center">Kesepakatan kontrak, legalitas, dan jadwal suplai.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-16 h-16 bg-white border-4 border-quaternary rounded-full flex items-center justify-center text-quaternary text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto">4</div>
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Delivery</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center">Pengiriman BBM dengan presisi volume & ketepatan waktu.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-center items-start pl-12 md:pl-0 mt-8 md:mt-0" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-16 h-16 bg-primary border-4 border-accent rounded-full flex items-center justify-center text-accent text-xl font-bold shadow-lg mb-4 absolute md:relative left-0 md:left-auto top-0 md:top-auto"><i class="fas fa-check"></i></div>
+                        <h4 class="text-lg font-bold text-primary mb-2 text-left md:text-center">Support</h4>
+                        <p class="text-sm text-slate-500 text-left md:text-center">Dukungan purna jual dan manajemen administrasi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-16 border border-slate-100 flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-quaternary font-bold tracking-widest uppercase mb-2">Coverage Area</h2>
+                    <h3 class="text-3xl font-bold text-primary mb-6">Strategic Operational Hub</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Infrastruktur kami berpusat di perairan strategis Kepulauan Riau. Memiliki <strong>Floating Storage SELARAS 01</strong> berkapasitas 2.300 KL yang berlokasi di Kec. Meral, Kab. Karimun, kami siap melayani kebutuhan suplai BBM dari pusat maritim Selat Malaka, Batam, hingga jangkauan nusantara.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-700 font-medium">
+                            <i class="fas fa-map-marker-alt text-accent"></i> Head Office: Batam City
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 font-medium">
+                            <i class="fas fa-ship text-accent"></i> Storage Terminal: Karimun Regency
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
+                    <div class="aspect-video bg-secondary rounded-2xl p-6 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#00C2FF 2px, transparent 2px); background-size: 20px 20px;"></div>
+                        <i class="fas fa-map-marked-alt text-9xl text-white/10 absolute"></i>
+                        
+                        <div class="relative z-10 text-center">
+                            <div class="w-4 h-4 bg-accent rounded-full mx-auto mb-2 animate-ping"></div>
+                            <div class="glass-light text-primary font-bold px-4 py-2 rounded-lg text-sm inline-block shadow-lg">
+                                Karimun - Batam (Kepri)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative bg-gradient-to-br from-primary to-tertiary overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute -right-20 -top-20 w-72 h-72 bg-accent rounded-full mix-blend-overlay filter blur-[64px] opacity-50"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Siap Mengakselerasi Kinerja Bisnis Anda?</h2>
+            <p class="text-slate-300 text-lg mb-10">Jadilah bagian dari mitra strategis kami untuk pasokan bahan bakar minyak yang efisien, handal, dan profesional.</p>
+            <a href="#contact" class="inline-block bg-white text-primary hover:bg-accent hover:text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg">
+                Hubungi Kami Sekarang
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-primary text-white pt-20 pb-10 border-t-4 border-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-3 rounded-lg inline-block mb-6 shadow-lg">
+                        <img src="assets/gpp.png" alt="Global Petro Pasifik" class="h-10 object-contain filter">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Perusahaan niaga umum bahan bakar minyak dengan standar internasional. Melayani suplai industri dan maritim dengan jaminan kualitas terbaik.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> About Us</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Services</a></li>
+                        <li><a href="#products" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Our Products</a></li>
+                        <li><a href="#process" class="text-slate-400 hover:text-accent transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Work Process</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Our Brands</h4>
+                    <ul class="space-y-3">
+                        <li><span class="text-slate-400 text-sm flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> G-Probio 48 & 51</span></li>
+                        <li><span class="text-slate-400 text-sm flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> G-Pro 180 & 380</span></li>
+                        <li><span class="text-slate-400 text-sm flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> G-Pro LS Series</span></li>
+                        <li><span class="text-slate-400 text-sm flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> G-Prodiesel</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Head Office</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-accent mt-1"></i>
+                            <span class="text-slate-400 text-sm leading-relaxed">
+                                Jl. Central Raya No.17, Central Sukajadi, Kel. Sukajadi, Kec. Batam Kota, Kota Batam, Prov. Kepulauan Riau
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-accent"></i>
+                            <span class="text-slate-400 text-sm">Contact Support</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <span class="text-slate-400 text-sm">info@globalpetropasifik.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">
+                    &copy; <script>document.write(new Date().getFullYear())</script> PT Global Petro Pasifik. All rights reserved.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Animated Counter Logic
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Intersection Observer for Counters
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const counterSection = document.getElementById('counter-section');
+        if(counterSection) {
+            observer.observe(counterSection);
+        }
+    </script>
+</body>
+</html>
